@@ -85,9 +85,10 @@ public class WizardActivity extends AppCompatActivity {
             ImageView imgFragment = (ImageView) rootView.findViewById(R.id.imgFragment);
             int pos = mViewPager.getCurrentItem();
             Log.d("Wizard", "onCreateView: " + pos);
-            
-            switch (pos){
+            Log.d("Wizard", "onCreateView: getArguments" + getArguments().getInt(ARG_SECTION_NUMBER))
+            switch (getArguments().getInt(ARG_SECTION_NUMBER)){
                 case 1:
+//                     rootView.setBackgroundResource(R.drawable.face2);
                     imgFragment.setImageResource(R.mipmap.categorias);
                     break;
                 case 2:
